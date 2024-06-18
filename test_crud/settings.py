@@ -40,7 +40,11 @@ if os.path.isfile('env.py'):
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+# Define STATIC_ROOT para decirle a Django dónde recolectar los archivos estáticos
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+# Asegúrate de que STATIC_URL esté definido, por ejemplo:
+STATIC_URL = '/static/'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
