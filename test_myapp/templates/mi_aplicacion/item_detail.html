@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Detalle del Item</title>
+</head>
+
+<body>
+    <h1>{{ item.nombre }}</h1>
+    <p>{{ item.descripcion }}</p>
+    <p>{{ item.precio }}</p>
+    <p>{{ item.fecha_creacion }}</p>
+    <a href="{% url 'item_edit' item.pk %}">Editar</a>
+    <a href="{% url 'item_delete' item.pk %}">Eliminar</a>
+    <a href="{% url 'item_list' %}">Volver a la lista</a>
+</body>
+
+</html>
